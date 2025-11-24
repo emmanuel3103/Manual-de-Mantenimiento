@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manual de Mantenimiento — Sistema EDI 301</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0 1.5rem 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    h1, h2, h3, h4 {
+      color: #222;
+    }
+    nav {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    nav h2 {
+      margin-top: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    nav li {
+      margin-bottom: 0.25rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Manual de Mantenimiento — Sistema EDI 301</h1>
+  <p>Equipo de desarrollo EDI 301 — Universidad Linda Vista</p>
+</header>
+
+<nav>
+  <h2>Índice</h2>
+  <ul>
+    <li><a href="#resumen">Resumen</a></li>
+
+    <li><a href="#sec1">1. Procedimientos de mantenimiento</a>
+      <ul>
+        <li><a href="#sec1-1">1.1 Tipos de mantenimiento</a></li>
+        <li><a href="#sec1-2">1.2 Procedimiento general</a></li>
+        <li><a href="#sec1-3">1.3 Frecuencia de revisión recomendada</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#sec2">2. Plan de actualizaciones</a>
+      <ul>
+        <li><a href="#sec2-1">2.1 Objetivo</a></li>
+        <li><a href="#sec2-2">2.2 Estrategia general</a></li>
+        <li><a href="#sec2-3">2.3 Cronograma sugerido</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#sec3">3. Manejo de errores</a>
+      <ul>
+        <li><a href="#sec3-1">3.1 Registro y monitoreo</a></li>
+        <li><a href="#sec3-2">3.2 Estructura del mensaje de error</a></li>
+        <li><a href="#sec3-3">3.3 Tipos de error comunes</a></li>
+        <li><a href="#sec3-4">3.4 Procedimiento ante errores críticos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#sec4">4. Copias de seguridad y recuperación</a>
+      <ul>
+        <li><a href="#sec4-1">4.1 Estrategia de respaldo</a></li>
+        <li><a href="#sec4-2">4.2 Plan de recuperación</a></li>
+        <li><a href="#sec4-3">4.3 Pruebas de recuperación</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#conclusion">Conclusión</a></li>
+  </ul>
+</nav>
+
+<section id="resumen">
+  <h2>Resumen</h2>
+  <p>
+    El presente documento constituye el Manual de Mantenimiento del sistema EDI-301,
+    detallando los procedimientos de mantenimiento preventivo y correctivo, el plan
+    de actualizaciones, la gestión de errores y las estrategias de respaldo y recuperación.
+    Su finalidad es asegurar la continuidad operativa y la evolución estable del sistema.
+  </p>
+</section>
+
+<section id="sec1">
+  <h2>1. Procedimientos de mantenimiento</h2>
+
+  <section id="sec1-1">
+    <h3>1.1 Tipos de mantenimiento</h3>
+    <ul>
+      <li><strong>Mantenimiento correctivo:</strong> resolución de errores detectados en operación.</li>
+      <li><strong>Mantenimiento preventivo:</strong> revisiones periódicas, rendimiento y seguridad.</li>
+      <li><strong>Mantenimiento perfectivo:</strong> mejoras funcionales, optimización y refactorización.</li>
+      <li><strong>Mantenimiento adaptativo:</strong> ajustes por cambios tecnológicos o institucionales.</li>
+    </ul>
+  </section>
+
+  <section id="sec1-2">
+    <h3>1.2 Procedimiento general</h3>
+    <ol>
+      <li>Registrar incidente en GitHub o sistema de control.</li>
+      <li>Clasificar prioridad y tipo de mantenimiento.</li>
+      <li>Planificar solución y realizar pruebas preliminares.</li>
+      <li>Aplicar correcciones en código, BD o servidor.</li>
+      <li>Ejecutar pruebas unitarias y de integración.</li>
+      <li>Desplegar nueva versión siguiendo control de versiones.</li>
+      <li>Actualizar documentación o bitácoras.</li>
+    </ol>
+  </section>
+
+  <section id="sec1-3">
+    <h3>1.3 Frecuencia de revisión recomendada</h3>
+    <ul>
+      <li><strong>Logs del servidor:</strong> semanal.</li>
+      <li><strong>Dependencias Node.js y Flutter:</strong> trimestral.</li>
+      <li><strong>Auditoría de seguridad y roles:</strong> semestral.</li>
+      <li><strong>Respaldo y recuperación:</strong> semanal.</li>
+    </ul>
+  </section>
+</section>
+
+<section id="sec2">
+  <h2>2. Plan de actualizaciones</h2>
+
+  <section id="sec2-1">
+    <h3>2.1 Objetivo</h3>
+    <p>
+      Garantizar la evolución continua del sistema manteniendo compatibilidad,
+      seguridad y rendimiento.
+    </p>
+  </section>
+
+  <section id="sec2-2">
+    <h3>2.2 Estrategia general</h3>
+    <ul>
+      <li>Uso de control de versiones Git.</li>
+      <li>Ramas diferenciadas (<code>main</code>, <code>dev</code>, <code>feature/</code>).</li>
+      <li>Documentar cada versión en <code>CHANGELOG.md</code>.</li>
+      <li>Ejecutar pruebas automatizadas antes de producción.</li>
+      <li>Notificar a usuarios sobre cambios relevantes.</li>
+    </ul>
+  </section>
+
+  <section id="sec2-3">
+    <h3>2.3 Cronograma sugerido</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Periodo</th>
+          <th>Actividad principal</th>
+          <th>Responsable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mensual</td>
+          <td>Revisión de dependencias y librerías</td>
+          <td>Equipo técnico</td>
+        </tr>
+        <tr>
+          <td>Trimestral</td>
+          <td>Actualización de módulos Flutter y API REST</td>
+          <td>Desarrolladores backend/frontend</td>
+        </tr>
+        <tr>
+          <td>Semestral</td>
+          <td>Evaluación de rendimiento y seguridad</td>
+          <td>Administrador del sistema</td>
+        </tr>
+        <tr>
+          <td>Anual</td>
+          <td>Revisión integral de arquitectura y documentación</td>
+          <td>Coordinador del proyecto</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+<section id="sec3">
+  <h2>3. Manejo de errores</h2>
+
+  <section id="sec3-1">
+    <h3>3.1 Registro y monitoreo</h3>
+    <ul>
+      <li>Captura de excepciones mediante middleware en Node.js.</li>
+      <li>Registro en logs del servidor (Winston, LogRocket, etc.).</li>
+      <li>Notificación de fallos críticos al correo o canal de soporte.</li>
+    </ul>
+  </section>
+
+  <section id="sec3-2">
+    <h3>3.2 Estructura del mensaje de error</h3>
+    <pre>{
+  "ok": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "El campo 'email' es obligatorio",
+    "details": ["email"]
+  },
+  "timestamp": "2025-10-28T12:00:00Z"
+}</pre>
+  </section>
+
+  <section id="sec3-3">
+    <h3>3.3 Tipos de error comunes</h3>
+    <ul>
+      <li><strong>400 Bad Request:</strong> datos inválidos.</li>
+      <li><strong>401 Unauthorized:</strong> token inválido o expirado.</li>
+      <li><strong>403 Forbidden:</strong> permisos insuficientes.</li>
+      <li><strong>404 Not Found:</strong> recurso no encontrado.</li>
+      <li><strong>409 Conflict:</strong> datos en conflicto.</li>
+      <li><strong>500 Internal Server Error:</strong> fallos en servidor o BD.</li>
+    </ul>
+  </section>
+
+  <section id="sec3-4">
+    <h3>3.4 Procedimiento ante errores críticos</h3>
+    <ol>
+      <li>Identificar módulo afectado y reproducir error.</li>
+      <li>Analizar logs y verificar versión desplegada.</li>
+      <li>Aplicar hotfix y luego solución definitiva.</li>
+      <li>Notificar a responsables y usuarios afectados.</li>
+    </ol>
+  </section>
+</section>
+
+<section id="sec4">
+  <h2>4. Copias de seguridad y recuperación</h2>
+
+  <section id="sec4-1">
+    <h3>4.1 Estrategia de respaldo</h3>
+    <ul>
+      <li><strong>Base de datos SQL Server:</strong> respaldos automáticos diarios.</li>
+      <li><strong>Archivos del servidor:</strong> respaldo semanal de recursos estáticos.</li>
+      <li><strong>Código fuente:</strong> sincronizado continuamente en Git.</li>
+      <li><strong>Backups externos:</strong> almacenamiento en ubicaciones remotas (OneDrive, Google Drive, Azure).</li>
+    </ul>
+  </section>
+
+  <section id="sec4-2">
+    <h3>4.2 Plan de recuperación</h3>
+    <ol>
+      <li>Detener temporalmente los servicios afectados.</li>
+      <li>Restaurar última copia de seguridad verificada.</li>
+      <li>Validar integridad de los datos restaurados.</li>
+      <li>Registrar el evento en la bitácora.</li>
+      <li>Notificar restablecimiento del servicio.</li>
+    </ol>
+  </section>
+
+  <section id="sec4-3">
+    <h3>4.3 Pruebas de recuperación</h3>
+    <p>
+      Se recomienda ejecutar simulaciones de restauración al menos una vez por semestre
+      para asegurar la funcionalidad y efectividad del proceso.
+    </p>
+  </section>
+</section>
+
+<section id="conclusion">
+  <h2>Conclusión</h2>
+  <p>
+    Este manual establece pautas necesarias para garantizar la operación continua,
+    la prevención de fallos y la actualización controlada del sistema EDI 301.
+    Su correcta aplicación contribuye a la estabilidad, seguridad y evolución constante
+    del sistema dentro del entorno institucional.
+  </p>
+</section>
+
+</body>
+</html>
